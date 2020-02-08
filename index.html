@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
     
 </head>
@@ -170,8 +171,8 @@
                      <div id="price-summary" class="panel  prices-summary">
                         <div class="nav-tabs" data-tabs-nav="">
                            <div class="nav-tabs__content">
-                              <a href="#prices-summary-sell" class="nav-tabs__item nav-tabs__item--active">Prix au m²</a>
-                              <a href="#prices-summary-rental" class="nav-tabs__item">Loyer au m²</a>
+                              <a href="#prices-summary-sell" id="prices-summary-sell" class="nav-tabs__item nav-tabs__item--active">Prix au m²</a>
+                              <a href="#prices-summary-rental" id="prices-summary-rental" class="nav-tabs__item">Loyer au m²</a>
                            </div>
                         </div>
                         <div class="prices-summary__values">
@@ -244,7 +245,7 @@
                                     </div>
                                  </div>
                               </section>
-                              <section class="prices-summary__rental-prices hide" id="prices-summary-rental">
+                              <section class="prices-summary__rental-prices " id="prices-summary-rental" style="display: none;">
                                  <h1 data-prices-rental-title="" class="prices-summary__title
                                     ">Loyer mensuel à Paris (75000)</h1>
                                  <div class="prices-summary__disclaimer">
@@ -343,7 +344,7 @@
                                  </div>
                               </li>
                            </ul>
-                           <img src="https://indices.meilleursagents.com/indices/v1/indice/2080244938/chart" style="width:100%;" alt="Evolution du prix immobilier à Paris depuis toujours" data-evolution-chart-img="">
+                           <img src="./image/chart.png" style="width:100%;" alt="Evolution du prix immobilier à Paris depuis toujours" data-evolution-chart-img="">
                         </div>
                         <div class="panel__footer">
                            <p>Source : Données MeilleursAgents et données publiques (Notaires, INSEE)</p>
@@ -386,14 +387,14 @@
                            </div>
                         </div>
                         <div class="panel__content" data-place-realtors="">
-                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small" data-realtor-list-item="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_show_more" data-wa-track="display" data-wa-key="print" data-wa-name="realtor_in_list" data-wa-data="source=prices|realtor_id=224|algorithm=r2v3_ps|position=1">
+                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small" >
                               <div class="flex full-width">
-                                 <span class="realtor-list-item__logo realtor-list-item__logo--contact" data-realtor-id="224" data-realtor-logo="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_logo">
+                                 <span class="realtor-list-item__logo realtor-list-item__logo--contact">
                                  <img src="./image/51032eedcc14170.224.jpg" width="100%" alt="Agence IMAX CHAMPIONNET">
                                  </span>
                                  <div class="realtor-list-item__info realtor-list-item__info--contact">
                                     <div class="realtor-list-item__title">
-                                       <span data-realtor-list-item-title="" id="realtor-link-224" data-realtor-id="224" title="IMAX CHAMPIONNET" class="realtor-list-item__title-name realtor-list-item__title-name--contact" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_title">
+                                       <span  title="IMAX CHAMPIONNET" class="realtor-list-item__title-name realtor-list-item__title-name--contact" >
                                        IMAX CHAMPIONNET
                                        </span>
                                     </div>
@@ -438,12 +439,12 @@
                               </div>
                               
                            </div>
-                           <div data-realtor-contact="" data-realtor-contact-224="" class="hide realtor-list-contact-container">
+                           <div class="realtor-list-contact-container content-list"  style="display: none;">
                               <div class="realtor-list-contact">
                                  <div class="realtor-list-contact__profile">
                                     <div>
                                        <div class="realtor-list-contact__intro flex flex-wrap-sm flex-justify-center">
-                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-imax-championnet-224/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=224|position=1"><img src="//thumbor.meilleursagents.com/8g6vkC4Mt5ozgadOsB5EUoZ-B_E=/fit-in/58x58/filters:fill(white)/contacts/67/bb/ca628e5c02ac80e.2548353.jpg" width="100%" alt="Agence IMAX CHAMPIONNET" data-realtor-list-item-avatar=""></a>
+                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-imax-championnet-224/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=224|position=1"><img src="./image/97e4769002956b63cff7d962e8521bb1bc7bbc7d.jpg" width="100%" alt="Agence IMAX CHAMPIONNET" data-realtor-list-item-avatar=""></a>
                                           <div data-realtor-list-item-director="" class="realtor-list-contact__info">
                                              <p class="no-margin text--bold">
                                                 Yannis BOIMARE
@@ -502,7 +503,7 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small" data-realtor-list-item="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_show_more" data-wa-track="display" data-wa-key="print" data-wa-name="realtor_in_list" data-wa-data="source=prices|realtor_id=51416|algorithm=r2v3_ps|position=2">
+                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small" >
                               <div class="flex full-width">
                                  <span class="realtor-list-item__logo realtor-list-item__logo--contact" data-realtor-id="51416" data-realtor-logo="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_logo">
                                  <img src="./image/51032eedcc14170.224.jpg" width="100%" alt="Agence GUY HOQUET CONVENTION">
@@ -554,12 +555,12 @@
                               </div>
                               
                            </div>
-                           <div data-realtor-contact="" data-realtor-contact-51416="" class="hide realtor-list-contact-container">
+                           <div class="realtor-list-contact-container content-list" style="display: none;">
                               <div class="realtor-list-contact">
                                  <div class="realtor-list-contact__profile">
                                     <div>
                                        <div class="realtor-list-contact__intro flex flex-wrap-sm flex-justify-center">
-                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-guy-hoquet-convention-51416/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=51416|position=2"><img src="//thumbor.meilleursagents.com/TLggt3jlzmdE3-GcxD0W3s0NnBk=/fit-in/58x58/filters:fill(white)/contacts/97/e4/97e4769002956b63cff7d962e8521bb1bc7bbc7d.jpg" width="100%" alt="Agence GUY HOQUET CONVENTION" data-realtor-list-item-avatar=""></a>
+                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-guy-hoquet-convention-51416/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=51416|position=2"><img src="./image/97e4769002956b63cff7d962e8521bb1bc7bbc7d.jpg" width="100%" alt="Agence GUY HOQUET CONVENTION" data-realtor-list-item-avatar=""></a>
                                           <div data-realtor-list-item-director="" class="realtor-list-contact__info">
                                              <p class="no-margin text--bold">
                                                 Aldo  Daiu
@@ -618,7 +619,7 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small" data-realtor-list-item="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_show_more" data-wa-track="display" data-wa-key="print" data-wa-name="realtor_in_list" data-wa-data="source=prices|realtor_id=53470|algorithm=r2v3_ps|position=3">
+                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small">
                               <div class="flex full-width">
                                  <span class="realtor-list-item__logo realtor-list-item__logo--contact" data-realtor-id="53470" data-realtor-logo="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_logo">
                                  <img src="./image/51032eedcc14170.224.jpg" width="100%" alt="Agence BUILDING PARTNERS - ETOILE">
@@ -670,12 +671,12 @@
                               </div>
                              
                            </div>
-                           <div data-realtor-contact="" data-realtor-contact-53470="" class="hide realtor-list-contact-container">
+                           <div class=" realtor-list-contact-container content-list" style="display: none;">
                               <div class="realtor-list-contact">
                                  <div class="realtor-list-contact__profile">
                                     <div>
                                        <div class="realtor-list-contact__intro flex flex-wrap-sm flex-justify-center">
-                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-building-partners-etoile-53470/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=53470|position=3"><img src="//thumbor.meilleursagents.com/1daT5uObuGgh6mshbn1uuSRo9HM=/fit-in/58x58/filters:fill(white)/contacts/46/e0/93d4ec430e5f771.1476462.jpg" width="100%" alt="Agence BUILDING PARTNERS - ETOILE" data-realtor-list-item-avatar=""></a>
+                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-building-partners-etoile-53470/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=53470|position=3"><img src="./image/97e4769002956b63cff7d962e8521bb1bc7bbc7d.jpg" width="100%" alt="Agence BUILDING PARTNERS - ETOILE" data-realtor-list-item-avatar=""></a>
                                           <div data-realtor-list-item-director="" class="realtor-list-contact__info">
                                              <p class="no-margin text--bold">
                                                 Evan Hadida
@@ -734,7 +735,7 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small" data-realtor-list-item="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_show_more" data-wa-track="display" data-wa-key="print" data-wa-name="realtor_in_list" data-wa-data="source=prices|realtor_id=56468|algorithm=r2v3_ps|position=4">
+                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small">
                               <div class="flex full-width">
                                  <span class="realtor-list-item__logo realtor-list-item__logo--contact" data-realtor-id="56468" data-realtor-logo="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_logo">
                                  <img src="./image/51032eedcc14170.224.jpg" width="100%" alt="Agence BARNES - MARAIS">
@@ -786,12 +787,12 @@
                               </div>
                              
                            </div>
-                           <div data-realtor-contact="" data-realtor-contact-56468="" class="hide realtor-list-contact-container">
+                           <div  class="realtor-list-contact-container content-list" style="display: none;">
                               <div class="realtor-list-contact">
                                  <div class="realtor-list-contact__profile">
                                     <div>
                                        <div class="realtor-list-contact__intro flex flex-wrap-sm flex-justify-center">
-                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-barnes-marais-56468/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=56468|position=4"><img src="//thumbor.meilleursagents.com/l3Mkb5bvBES5zCOq9I2VIjC6fqM=/fit-in/58x58/filters:fill(white)/contacts/1d/a9/4d84ec76885df49.1795753.png" width="100%" alt="Agence BARNES - MARAIS" data-realtor-list-item-avatar=""></a>
+                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-barnes-marais-56468/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=56468|position=4"><img src="./image/97e4769002956b63cff7d962e8521bb1bc7bbc7d.jpg" width="100%" alt="Agence BARNES - MARAIS" data-realtor-list-item-avatar=""></a>
                                           <div data-realtor-list-item-director="" class="realtor-list-contact__info">
                                              <p class="no-margin text--bold">
                                                 Caroline Baudry
@@ -850,7 +851,7 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small" data-realtor-list-item="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_show_more" data-wa-track="display" data-wa-key="print" data-wa-name="realtor_in_list" data-wa-data="source=prices|realtor_id=51245|algorithm=r2v3_ps|position=5">
+                           <div class="realtor-list-item realtor-list-item--contact realtor-list-item--small" >
                               <div class="flex full-width">
                                  <span class="realtor-list-item__logo realtor-list-item__logo--contact" data-realtor-id="51245" data-realtor-logo="" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="realtor:show_more" data-ua-event-label="prices:realtors_list:realtor_logo">
                                  <img src="./image/51032eedcc14170.224.jpg" width="100%" alt="Agence AUBURTIN IMMOBILIER">
@@ -902,12 +903,12 @@
                               </div>
                               
                            </div>
-                           <div data-realtor-contact="" data-realtor-contact-51245="" class="hide realtor-list-contact-container">
+                           <div class="realtor-list-contact-container content-list" style="display: none;"> 
                               <div class="realtor-list-contact">
                                  <div class="realtor-list-contact__profile">
                                     <div>
                                        <div class="realtor-list-contact__intro flex flex-wrap-sm flex-justify-center">
-                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-auburtin-immobilier-51245/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=51245|position=5"><img src="//thumbor.meilleursagents.com/DeE-JkaY4BGyma0A8K2K_p-ynpw=/fit-in/58x58/filters:fill(white)/contacts/e6/f5/eabcfa62c8edc30.1188243.jpg" width="100%" alt="Agence AUBURTIN IMMOBILIER" data-realtor-list-item-avatar=""></a>
+                                          <a data-realtor-list-item-avatar="" href="/agence-immobiliere/agence-auburtin-immobilier-51245/#equipe" target="_blank" rel="noopener noreferrer" class="realtor-list-contact__avatar" data-ua-hit-type="event" data-ua-event-category="Page prix" data-ua-event-action="go:realtor_page" data-ua-event-label="prices:realtors_list:realtor_team" data-wa-track="click" data-wa-key="go:realtor" data-wa-name="prices:realtors_list:team" data-wa-data="source=prices|realtor_id=51245|position=5"><img src="./image/97e4769002956b63cff7d962e8521bb1bc7bbc7d.jpg" width="100%" alt="Agence AUBURTIN IMMOBILIER" data-realtor-list-item-avatar=""></a>
                                           <div data-realtor-list-item-director="" class="realtor-list-contact__info">
                                              <p class="no-margin text--bold">
                                                 Damien Auburtin
@@ -1348,7 +1349,8 @@
                         <div class="panel__content">
                            <div class="container--column iti-intro">
                               <div class="text--center margin-top-triple margin-bottom-double">
-                                 En février 2020 à Paris, le nombre d'acheteurs est supérieur de <span class="iti-intro__tag">23%</span> au nombre de biens à vendre. Le marché est <strong>très dynamique</strong>.
+                                  En février 2020 à Paris, le nombre d'acheteurs est supérieur de 
+                                 <span class="iti-intro__tag">23%</span> au nombre de biens à vendre.<p style="padding:0;margin:0"> Le marché est <strong>très dynamique</strong>.</p>
                               </div>
                            </div>
                            <div class="iti-graph" aria-hidden="true">
@@ -2591,181 +2593,12 @@
                </div>
             </div>
             <div data-prices-map="">
-               <div id="qtipContainer"></div>
-               <div class="vector-map loading-wrapper" data-vector-map="">
-                  <div class="loading-container container--no-horizontal-gutter container--no-vertical-gutter">
-                     <div class="spinner--dots">
-                        <div class="bounce1"></div>
-                        <div class="bounce2"></div>
-                        <div class="bounce3"></div>
-                     </div>
-                  </div>
-                  <div class="vector-map__wrapper">
-                     <div class="vector-map__top-toolbar">
-                        <div class="vector-map__toolbar-item vector-map__toolbar-item--tiles" data-tile-toolbar="">
-                           <ul class="dropdown-menu">
-                              <li class="dropdown-menu__item">
-                                 <button class="vector-map__tiles-btn btn-reset" aria-controls="map-tile-layers">
-                                 <span data-map-layer-btn="">Prix au m2</span>
-                                 <i class="icon icon-expand_more"></i>
-                                 </button>
-                                 <ul id="map-tile-layers" class="dropdown-menu__submenu" tabindex="-1" data-map-layer="">
-                                    <li class="dropdown-menu__submenu-item">
-                                       <label class="label vector-map__tiles-choice">
-                                       <input type="radio" name="map_control_tiles" value="none">
-                                       Aucun
-                                       </label>
-                                    </li>
-                                    <li class="dropdown-menu__submenu-item">
-                                       <label class="label vector-map__tiles-choice">
-                                       <input type="radio" name="map_control_tiles" value="estimates" checked="">
-                                       Prix au m2
-                                       </label>
-                                    </li>
-                                    <li class="dropdown-menu__submenu-item">
-                                       <label class="label vector-map__tiles-choice">
-                                       <input type="radio" name="map_control_tiles" value="rental_price">
-                                       Loyer au m2
-                                       </label>
-                                    </li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="vector-map__toolbar-item vector-map__toolbar-item--legend" data-map-legend="" data-no-legend-label="Pas de légende">
-                           <div data-legend-none="" class="vector-map__no-legend" style="display: none;">Pas de légende</div>
-                           <div data-legend-estimates="">
-                              <div class="vector-map__legend-description">Prix au m2</div>
-                              <ul class="colorscale estimates">
-                                 <li class="lbound">&lt; 7100 €</li>
-                                 <li class="q1_11 q-first tip-top" data-legend-tooltip="" data-hasqtip="11" oldtitle="< 7100 €" title=""></li>
-                                 <li class="q2_11 tip-top" data-legend-tooltip="" data-hasqtip="12" oldtitle="7100 € à 7600 €" title=""></li>
-                                 <li class="q3_11 tip-top" data-legend-tooltip="" data-hasqtip="13" oldtitle="7600 € à 8100 €" title=""></li>
-                                 <li class="q4_11 tip-top" data-legend-tooltip="" data-hasqtip="14" oldtitle="8100 € à 8600 €" title=""></li>
-                                 <li class="q5_11 tip-top" data-legend-tooltip="" data-hasqtip="15" oldtitle="8600 € à 9100 €" title=""></li>
-                                 <li class="q6_11 tip-top" data-legend-tooltip="" data-hasqtip="16" oldtitle="9100 € à 9600 €" title=""></li>
-                                 <li class="q7_11 tip-top" data-legend-tooltip="" data-hasqtip="17" oldtitle="9600 € à 10100 €" title=""></li>
-                                 <li class="q8_11 tip-top" data-legend-tooltip="" data-hasqtip="18" oldtitle="10100 € à 10800 €" title=""></li>
-                                 <li class="q9_11 tip-top" data-legend-tooltip="" data-hasqtip="19" oldtitle="10800 € à 11900 €" title=""></li>
-                                 <li class="q10_11 tip-top" data-legend-tooltip="" data-hasqtip="20" oldtitle="11900 € à 13700 €" title=""></li>
-                                 <li class="q11_11 q-last tip-top" data-legend-tooltip="" data-hasqtip="21" oldtitle="> 13700 €" title=""></li>
-                                 <li class="ubound">&gt; 13700 €</li>
-                              </ul>
-                           </div>
-                           <div data-legend-rental_price="" style="display: none;">
-                              <div class="vector-map__legend-description">Loyer au m2</div>
-                              <ul class="colorscale rental_price">
-                                 <li class="lbound">&lt; 27.0 €</li>
-                                 <li class="q1_9 q-first tip-top" data-legend-tooltip="" data-hasqtip="22" oldtitle="< 27.0 €" title=""></li>
-                                 <li class="q2_9 tip-top" data-legend-tooltip="" data-hasqtip="23" oldtitle="27.0 € à 28.0 €" title=""></li>
-                                 <li class="q3_9 tip-top" data-legend-tooltip="" data-hasqtip="24" oldtitle="28.0 € à 29.0 €" title=""></li>
-                                 <li class="q4_9 tip-top" data-legend-tooltip="" data-hasqtip="25" oldtitle="29.0 € à 30.0 €" title=""></li>
-                                 <li class="q5_9 tip-top" data-legend-tooltip="" data-hasqtip="26" oldtitle="30.0 € à 31.0 €" title=""></li>
-                                 <li class="q6_9 tip-top" data-legend-tooltip="" data-hasqtip="27" oldtitle="31.0 € à 32.0 €" title=""></li>
-                                 <li class="q7_9 tip-top" data-legend-tooltip="" data-hasqtip="28" oldtitle="32.0 € à 33.0 €" title=""></li>
-                                 <li class="q8_9 tip-top" data-legend-tooltip="" data-hasqtip="29" oldtitle="33.0 € à 34.0 €" title=""></li>
-                                 <li class="q9_9 q-last tip-top" data-legend-tooltip="" data-hasqtip="30" oldtitle="> 34.0 €" title=""></li>
-                                 <li class="ubound">&gt; 34.0 €</li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                     <div id="mapbox_map" class="vector-map__map mapboxgl-map" data-ua-event-category="Page prix" data-ua-event-label-prefix="prices:map" data-wa-source="prices" data-wa-name-prefix="prices:map">
-                        <div class="mapboxgl-canary" style="visibility: hidden;"></div>
-                        <div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate">
-                           <canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" width="960" height="186" style="position: absolute; width: 960px; height: 186px;"></canvas>
-                        </div>
-                        <div class="mapboxgl-control-container">
-                           <div class="mapboxgl-ctrl-top-left"></div>
-                           <div class="mapboxgl-ctrl-top-right">
-                              <div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-zoom-in" type="button" title="Zoom in" aria-label="Zoom in"></button><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-zoom-out" type="button" title="Zoom out" aria-label="Zoom out"></button><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-compass" type="button" title="Reset bearing to north" aria-label="Reset bearing to north"><span class="mapboxgl-ctrl-compass-arrow" style="transform: rotate(0deg);"></span></button></div>
-                              <div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button class="mapboxgl-ctrl-icon mapboxgl-ctrl-satellite" data-map-satellite-control=""><i class="icon icon-public"></i></button></div>
-                           </div>
-                           <div class="mapboxgl-ctrl-bottom-left">
-                              <div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" href="https://www.mapbox.com/" aria-label="Mapbox logo" rel="noopener"></a></div>
-                           </div>
-                           <div class="mapboxgl-ctrl-bottom-right">
-                              <div class="mapboxgl-ctrl mapboxgl-ctrl-attrib">
-                                 <div class="mapboxgl-ctrl-attrib-inner"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=meilleursagents&amp;id=cj1eyu17c00iv2rqslqi866y6&amp;access_token=pk.eyJ1IjoibWVpbGxldXJzYWdlbnRzIiwiYSI6ImNqMWV5YnRpMDAwMHkyeXRnd3JkdXRiaDEifQ.emcFsn3Ox6WcKmOHhbTOPQ" target="_blank">Improve this map</a></div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <a href="#vector-map-settings-popup" class="vector-map__settings-button" data-settings-button="">Filtres</a>
-                  </div>
-                  <div class="vector-map__bottom-toolbar" data-features-toolbar="">
-                     <div class="vector-map__toolbar-item">
-                        <label class="label" for="reference">
-                        <input type="checkbox" id="reference" name="map_control_reference" data-map-layer="reference" value="reference">
-                        <i class="icon icon-bullet-01 feature-reference"></i>
-                        Biens vendus
-                        </label>
-                     </div>
-                     <div class="vector-map__toolbar-item">
-                        <label class="label" for="new_development">
-                        <input type="checkbox" id="new_development" name="map_control_new_development" data-map-layer="new_development" value="new_development">
-                        <i class="icon icon-bullet-01 feature-new_development"></i>
-                        Programmes neufs
-                        </label>
-                     </div>
-                     <div class="vector-map__toolbar-item">
-                        <label class="label" for="realtor">
-                        <input type="checkbox" id="realtor" name="map_control_realtor" data-map-layer="realtor" value="realtor">
-                        <i class="icon icon-bullet-01 feature-realtor"></i>
-                        Agences
-                        </label>
-                     </div>
-                  </div>
-                  <div class="vector-map__infowindow" data-map-infowindow=""></div>
-                  <div class="vector-map__infowindow-prices" data-map-prices-infowindow=""></div>
-                  <div class="no-webgl-warning hide" data-map-nowebgl-warning="">
-                     <h3 class="no-webgl-warning__title">Cette carte ne peut pas s’afficher sur votre navigateur !</h3>
-                     <div class="no-webgl-warning__text">
-                        Pour voir cette carte, n’hésitez pas à télécharger un navigateur plus récent.
-                        <a href="https://www.google.fr/chrome/browser/desktop/">Chrome</a> et <a href="https://www.mozilla.org/fr/firefox/new/">Firefox</a> vous garantiront une expérience optimale sur notre site.
-                     </div>
-                  </div>
-               </div>
-               <div id="vector-map-settings-popup" class="popin mfp-hide vector-map-settings-popup__popin">
-                  <h3 class="popin__title title--h3">Filtres</h3>
-                  <div class="popin__body">
-                     <div class="vector-map-settings-popup">
-                        <ul class="vector-map-settings-popup__choices" data-map-settings="">
-                           <li class="vector-map-settings-popup__choice map-settings__item--head" data-map-settings-tiles="">Type de carte</li>
-                           <li class="vector-map-settings-popup__choice">
-                              <input type="radio" data-map-settings-tiles-control="" name="map_settings_tiles" id="map-settings-none" value="none">
-                              <label for="map-settings-none">Aucun</label>
-                           </li>
-                           <li class="vector-map-settings-popup__choice">
-                              <input type="radio" data-map-settings-tiles-control="" name="map_settings_tiles" id="map-settings-estimates" value="estimates" checked="">
-                              <label for="map-settings-estimates">Prix au m2</label>
-                           </li>
-                           <li class="vector-map-settings-popup__choice">
-                              <input type="radio" data-map-settings-tiles-control="" name="map_settings_tiles" id="map-settings-rental_price" value="rental_price">
-                              <label for="map-settings-rental_price">Loyer au m2</label>
-                           </li>
-                           <li class="vector-map-settings-popup__choice vector-map-settings-popup__choice--head" data-map-settings-features="">Biens et agences</li>
-                           <li class="vector-map-settings-popup__choice">
-                              <input type="checkbox" data-map-settings-features-control="" id="map-settings-reference" value="reference" name="map_setting_reference">
-                              <label for="map-settings-reference"><i class="icon icon-bullet-01 feature-reference"></i> Biens vendus</label>
-                           </li>
-                           <li class="vector-map-settings-popup__choice">
-                              <input type="checkbox" data-map-settings-features-control="" id="map-settings-new_development" value="new_development" name="map_setting_new_development">
-                              <label for="map-settings-new_development"><i class="icon icon-bullet-01 feature-new_development"></i> Programmes neufs</label>
-                           </li>
-                           <li class="vector-map-settings-popup__choice">
-                              <input type="checkbox" data-map-settings-features-control="" id="map-settings-realtor" value="realtor" name="map_setting_realtor">
-                              <label for="map-settings-realtor"><i class="icon icon-bullet-01 feature-realtor"></i> Agences</label>
-                           </li>
-                        </ul>
-                        <button class="btn btn--primary vector-map-settings-popup__button" data-map-settings-close="">Voir la carte</button>
-                     </div>
-                  </div>
-               </div>
-               <div data-estima-popover-placeholder=""></div>
+               
             </div>
          </section>
       </div>
     </div>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
