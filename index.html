@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <title>Document</title>
 
 </head>
@@ -24,7 +25,7 @@
             <span class="mobile-nav-toggler__title">Menu</span>
             </button>
             </div>
-            <div class="topnav__menu">
+            <div class="topnav__menu" aria-expanded="true">
                 <div class="topnav-submenu">
                     <button class="topnav-submenu__button" id="topnav-price-button">
                Prix immobilier
@@ -105,7 +106,7 @@
                </a>
                 </div>
                 <div class="topnav-submenu">
-                    <a href="https://pro.meilleursagents.com?utm_source=trappe_lead&amp;utm_medium=www&amp;utm_campaign=Navigation&amp;utm_content=nav:ma_pro">
+                    <a href="https://pro.meilleursagents.com?utm_source=trappe_lead&amp;utm_medium=www&amp;utm_campaign=Navigation&amp;utm_content=nav:ma_pro" class="topnav-submenu__button topnav-submenu__button--raw">
                   Nos offres pro
                   <svg class="svg margin-left-half" width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" alt="">
                      <path class="svg__path" fill="#4a4a4a" d="M10 6.25a.5.5 0 0 0-.5.5v3.56a.69.69 0 0 1-.69.69H1.69a.69.69 0 0 1-.69-.69V3.19a.69.69 0 0 1 .69-.69h3.56a.5.5 0 0 0 0-1H1.69A1.69 1.69 0 0 0 0 3.19v7.12A1.69 1.69 0 0 0 1.69 12h7.12a1.69 1.69 0 0 0 1.69-1.69V6.75a.5.5 0 0 0-.5-.5z"></path>
@@ -1378,7 +1379,7 @@
                         <button class="btn--link">Plus de détails </button>
                         <span class="icon-expand_more"></span>
                     </div>
-                    <div class="iti-dropdown__content">
+                    <div class="iti-dropdown__content" style="overflow: hidden; display: none; max-height: 428px;">
                         <p>L’influence de l’ITI sur les prix peut être modérée ou accentuée par l’évolution des taux d’emprunt immobilier.</p>
                         <p>Quand les taux sont très bas, les prix peuvent monter malgré un ITI faible.</p>
                         <p>Quand les taux sont très élevés, les prix peuvent baisser malgré un ITI élevé.</p>
@@ -1436,7 +1437,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-    <div class="accordion-panel accordion-panel--price container--row">
+    <div class="accordion-panel accordion-panel--price container--row" style="overflow: hidden; display: none; max-height: 1000px;">
         <table class="small">
             <thead>
                 <tr>
@@ -1534,7 +1535,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-    <div class="accordion-panel accordion-panel--price accordion-panel--rank">
+    <div class="accordion-panel accordion-panel--price container--row" style="overflow: hidden; display: none; max-height: 1000px;">
         <div class="container--row">
             <span class="container__item--half container__item-sm--full container--vertical-gutter">
                                  <p class="text--error price-details__top-flop--text">
@@ -1654,7 +1655,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-    <div class="accordion-panel accordion-panel--price">
+    <div class="accordion-panel accordion-panel--price container--row" style="overflow: hidden; display: none; max-height: 1000px;">
         <div class="container--row price-details__streets--list">
             <ul class="list-link">
                 <li>
@@ -1874,7 +1875,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-    <div class="accordion-panel accordion-panel--price container--row">
+    <div class="accordion-panel accordion-panel--price container--row" style="overflow: hidden; display: none; max-height: 1000px;">
         <table>
             <thead>
                 <tr>
@@ -2004,7 +2005,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-    <div class="accordion-panel accordion-panel--price container--row">
+    <div class="accordion-panel accordion-panel--price container--row" style="overflow: hidden; display: none; max-height: 1000px;">
         <table>
             <thead>
                 <tr>
@@ -2052,7 +2053,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-    <div class="accordion-panel accordion-panel--price container--row">
+    <div class="accordion-panel accordion-panel--price container--row" style="overflow: hidden; display: none; max-height: 1000px;">
         <table>
             <thead>
                 <tr>
@@ -2237,7 +2238,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-        <div class="accordion-panel container--row accordion-panel--price">
+        <div class="accordion-panel container--row accordion-panel--price" style="overflow: hidden; display: none; max-height: 1000px;">
             <table>
                 <tbody>
                     <tr>
@@ -2277,7 +2278,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-        <div class="accordion-panel container--row accordion-panel--price">
+        <div class="accordion-panel container--row accordion-panel--price" style="overflow: hidden; display: none; max-height: 1000px;">
             <table>
                 <tbody>
                     <tr class="indicator">
@@ -2337,7 +2338,7 @@
                               <span class="icon-expand_more"></span>
                            </div>
                         </button>
-        <div class="accordion-panel container--row accordion-panel--price">
+        <div class="accordion-panel container--row accordion-panel--price" style="overflow: hidden; display: none; max-height: 1000px;">
             <table>
                 <tbody>
                     <tr class="indicator">
