@@ -21,7 +21,7 @@ $(document).ready(function(){
     $('.realtor-list-item').click(function(){
         var i = $(this).index();
         var nthChild = i +2;
-        $('.realtor-list-contact-container.content-list:nth-child('+nthChild+')').removeClass('hide');
+        
         $('.realtor-list-contact-container.content-list:nth-child('+nthChild+')').toggle();
         console.log(nthChild);
     });
